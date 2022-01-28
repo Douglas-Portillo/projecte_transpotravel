@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class seguiment {
 
 	private int idSeguiment;
-	private ArrayList<desplacament> desplacament = new ArrayList<desplacament>();
-	private ArrayList<equipatge> equipatge = new ArrayList<equipatge>();
+	private ArrayList<desplacament> desplacament;
+	private ArrayList<equipatge> equipatge;
 	private String estat;
 	
 	public seguiment(int idSeguiment, ArrayList<model.desplacament> desplacament, ArrayList<model.equipatge> equipatge,

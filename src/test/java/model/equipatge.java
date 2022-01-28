@@ -6,7 +6,7 @@ public class equipatge {
 
 	private int idEquipatge;
 	private String pes;
-	private ArrayList<client> client = new ArrayList<client>();
+	private ArrayList<client> client;
 	private String origen;
 	private String desti;
 	
