@@ -4,7 +4,7 @@ public class supervisor extends persona{
 
 	private int idSupervidor;
 
-	public supervisor(String nom, String cognoms, String dni, String adreca, String correu, int telefon,
+	public supervisor(String nom, String cognoms, String dni, String adreca, String correu, String telefon,
 			int idSupervidor) {
 		super(nom, cognoms, dni, adreca, correu, telefon);
 		this.idSupervidor = idSupervidor;

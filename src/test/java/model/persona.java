@@ -7,10 +7,10 @@ public class persona {
 	private String dni;
 	private String adreca;
 	private String correu;
-	private int telefon;
+	private String telefon;
 	
 	
-	public persona(String nom, String cognoms, String dni, String adreca, String correu, int telefon) {
+	public persona(String nom, String cognoms, String dni, String adreca, String correu, String telefon) {
 		this.nom = nom;
 		this.cognoms = cognoms;
 		this.dni = dni;
@@ -70,12 +70,12 @@ public class persona {
 	}
 
 
-	public int getTelefon() {
+	public String getTelefon() {
 		return telefon;
 	}
 
 
-	public void setTelefon(int telefon) {
+	public void setTelefon(String telefon) {
 		this.telefon = telefon;
 	}
 

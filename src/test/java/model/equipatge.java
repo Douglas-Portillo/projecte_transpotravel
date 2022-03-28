@@ -1,20 +1,18 @@
 package model;
 
-import java.util.ArrayList;
-
 public class equipatge {
 
 	private int idEquipatge;
-	private String pes;
-	private ArrayList<client> client;
+	private int pes;
+	private client refClient;
 	private String origen;
 	private String desti;
 	
 	
-	public equipatge(int idEquipatge, String pes, ArrayList<model.client> client, String origen, String desti) {
+/**/public equipatge(int idEquipatge, int pes, client refClient, String origen, String desti) {
 		this.idEquipatge = idEquipatge;
 		this.pes = pes;
-		this.client = new ArrayList<client>();
+/**/	this.refClient = refClient;
 		this.origen = origen;
 		this.desti = desti;
 	}
@@ -30,36 +28,25 @@ public class equipatge {
 	}
 
 
-	public String getPes() {
+	public int getPes() {
 		return pes;
 	}
 
-
-	public void setPes(String pes) {
+	
+	public void setPes(int pes) {
 		this.pes = pes;
 	}
 
 
-	public ArrayList<client> getClient() {
-		return client;
+	public client getRefClient() {
+		return refClient;
 	}
 
 
-	public void setClient(ArrayList<client> client) {
-		this.client = client;
+	public void setRefClient(client refClient) {
+		this.refClient = refClient;
 	}
 
-	public void afegirClient(client client) {
-		
-		this.client.add(client);
-		
-	}
-	
-	public void eliminarClient(client client) {
-		
-		this.client.remove(client);
-		
-	}
 	
 	public String getOrigen() {
 		return origen;

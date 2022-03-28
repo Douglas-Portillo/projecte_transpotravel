@@ -1,19 +1,17 @@
 package model;
 
-import java.util.ArrayList;
-
 public class seguiment {
 
 	private int idSeguiment;
-	private ArrayList<desplacament> desplacament;
-	private ArrayList<equipatge> equipatge;
+	private desplacament refDesplacament;
+	private equipatge refEquipatge;
 	private String estat;
 	
-	public seguiment(int idSeguiment, ArrayList<model.desplacament> desplacament, ArrayList<model.equipatge> equipatge,
+	public seguiment(int idSeguiment, desplacament refDesplacament, equipatge refEquipatge,
 			String estat) {
 		this.idSeguiment = idSeguiment;
-		this.desplacament = new ArrayList<desplacament>();
-		this.equipatge = new ArrayList<equipatge>();
+		this.refDesplacament = refDesplacament;
+		this.refEquipatge = refEquipatge;
 		this.estat = estat;
 	}
 
@@ -25,45 +23,21 @@ public class seguiment {
 		this.idSeguiment = idSeguiment;
 	}
 
-	public ArrayList<desplacament> getDesplacament() {
-		return desplacament;
+	public desplacament getRefDesplacament() {
+		return refDesplacament;
 	}
 
-	public void setDesplacament(ArrayList<desplacament> desplacament) {
-		this.desplacament = desplacament;
-	}
-
-	public void afegirDesplacament (desplacament desplacament) {
-		
-		this.desplacament.add(desplacament);
-		
-	}
-	
-	public void eliminarDesplacament(desplacament desplacament) {
-		
-		this.desplacament.remove(desplacament);
-		
-	}
-		
-	public ArrayList<equipatge> getEquipatge() {
-		return equipatge;
-	}
-
-	public void setEquipatge(ArrayList<equipatge> equipatge) {
-		this.equipatge = equipatge;
+	public void setRefDesplacament(desplacament refDesplacament) {
+		this.refDesplacament = refDesplacament;
 	}
 
 	
-	public void afegirEquipatge(equipatge equipatge) {
-		
-		this.equipatge.add(equipatge);
-		
+	public equipatge getRefEquipatge() {
+		return refEquipatge;
 	}
-	
-	public void eliminarEquipatge(equipatge equipatge) {
-		
-		this.equipatge.remove(equipatge);
-		
+
+	public void setRefEquipatge(equipatge refEquipatge) {
+		this.refEquipatge = refEquipatge;
 	}
 	
 	public String getEstat() {

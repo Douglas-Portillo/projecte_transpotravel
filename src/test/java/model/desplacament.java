@@ -1,21 +1,19 @@
 package model;
 
-import java.util.ArrayList;
-
 public class desplacament {
 
 	private int idDesplacament;
-	private ArrayList<puntRecollida> puntRecollida;
-	private ArrayList<persona> persona;
+	private puntRecollida refPuntRecollida;
+	private persona refPersona;
 	private String origen;
 	private String desti;
 	private int preuFinal;
 	
-	public desplacament(int idDesplacament, ArrayList<model.puntRecollida> puntRecollida,
-			ArrayList<model.persona> persona, String origen, String desti, int preuFinal) {
+	public desplacament(int idDesplacament, puntRecollida refPuntRecollida,
+			persona refPersona, String origen, String desti, int preuFinal) {
 		this.idDesplacament = idDesplacament;
-		this.puntRecollida = new ArrayList<puntRecollida>();
-		this.persona = new ArrayList<persona>();
+		this.refPuntRecollida = refPuntRecollida;
+		this.refPersona = refPersona;
 		this.origen = origen;
 		this.desti = desti;
 		this.preuFinal = preuFinal;
@@ -29,49 +27,22 @@ public class desplacament {
 		this.idDesplacament = idDesplacament;
 	}
 
-	public ArrayList<puntRecollida> getPuntRecollida() {
-		return puntRecollida;
+	public puntRecollida getRefPuntRecollida() {
+		return refPuntRecollida;
 	}
 
-	public void setPuntRecollida(ArrayList<puntRecollida> puntRecollida) {
-		this.puntRecollida = puntRecollida;
-	}
-	
-	
-	public void afegirPuntRecollida(puntRecollida puntDeRecollida) {
-		
-		this.puntRecollida.add(puntDeRecollida);
-		
-	}
-	
-	public void eliminarPuntRecollida(puntRecollida puntDeRecollida) {
-		
-		this.puntRecollida.remove(puntDeRecollida);
-		
-	}
-	
-
-	public ArrayList<persona> getPersona() {
-		return persona;
+	public void setRefPuntRecollida(puntRecollida puntRecollida) {
+		this.refPuntRecollida = puntRecollida;
 	}
 
-	public void setPersona(ArrayList<persona> persona) {
-		this.persona = persona;
-	}
-	
-	
-	public void afegirPersona(persona persona) {
-		
-		this.persona.add(persona);
-		
-	}
-	
-	public void eliminarPersona(persona persona) {
-		
-		this.persona.remove(persona);
-		
+	public persona getRefPersona() {
+		return refPersona;
 	}
 
+	public void setRefPersona(persona objectePersona) {
+		this.refPersona = objectePersona;
+	}
+	
 	public String getOrigen() {
 		return origen;
 	}
@@ -99,8 +70,8 @@ public class desplacament {
 	@Override
 	public String toString() {
 		return "desplacament [idDesplacament=" + idDesplacament + ", origen=" + origen + ", desti=" + desti + ", preuFinal=" + preuFinal
-				+ ", getIdDesplacament()=" + getIdDesplacament() + ", getPuntRecollida()=" + getPuntRecollida()
-				+ ", getPersona()=" + getPersona() + ", getOrigen()=" + getOrigen() + ", getDesti()=" + getDesti()
+				+ ", getIdDesplacament()=" + getIdDesplacament() + ", getRefPuntRecollida()=" + getRefPuntRecollida()
+				+ ", getRefPersona()=" + getRefPersona() + ", getOrigen()=" + getOrigen() + ", getDesti()=" + getDesti()
 				+ ", getPreuFinal()=" + getPreuFinal() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
 				+ ", toString()=" + super.toString() + "]";
 	}

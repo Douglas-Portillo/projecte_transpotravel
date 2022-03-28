@@ -4,7 +4,7 @@ public class repartidor extends persona{
 
 	private int idRepartidor;
 
-	public repartidor(String nom, String cognoms, String dni, String adreca, String correu, int telefon,
+	public repartidor(String nom, String cognoms, String dni, String adreca, String correu, String telefon,
 			int idRepartidor) {
 		super(nom, cognoms, dni, adreca, correu, telefon);
 		this.idRepartidor = idRepartidor;
