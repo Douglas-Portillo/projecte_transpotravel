@@ -16,7 +16,7 @@ public class desplacament {
 		this.refPersona = refPersona;
 		this.origen = origen;
 		this.desti = desti;
-		this.preuFinal = preuFinal;//fewfw
+		this.preuFinal = preuFinal;
 	}
 
 	public int getIdDesplacament() {

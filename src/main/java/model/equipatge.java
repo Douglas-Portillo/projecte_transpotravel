@@ -4,20 +4,25 @@ public class equipatge {
 
 	private int idEquipatge;
 	private int pes;
-	private client refClient;
+	private String dni;
 	private String origen;
 	private String desti;
+	private String estat;
+	private String puntRecollida;
 	
 	
-/**/public equipatge(int idEquipatge, int pes, client refClient, String origen, String desti) {
+	public equipatge(int idEquipatge, int pes, String dni, String origen, String desti, String estat, String puntRecollida) {
 		this.idEquipatge = idEquipatge;
 		this.pes = pes;
-/**/	this.refClient = refClient;
+		this.dni = dni;
 		this.origen = origen;
 		this.desti = desti;
+		this.estat = estat;
+		this.puntRecollida = puntRecollida;
 	}
 
 
+	
 	public int getIdEquipatge() {
 		return idEquipatge;
 	}
@@ -32,22 +37,22 @@ public class equipatge {
 		return pes;
 	}
 
-	
+
 	public void setPes(int pes) {
 		this.pes = pes;
 	}
 
 
-	public client getRefClient() {
-		return refClient;
+	public String getDni() {
+		return dni;
 	}
 
 
-	public void setRefClient(client refClient) {
-		this.refClient = refClient;
+	public void setDni(String dni) {
+		this.dni = dni;
 	}
 
-	
+
 	public String getOrigen() {
 		return origen;
 	}
@@ -68,10 +73,31 @@ public class equipatge {
 	}
 
 
+	public String getEstat() {
+		return estat;
+	}
+
+
+	public void setEstat(String estat) {
+		this.estat = estat;
+	}
+
+
+	public String getPuntRecollida() {
+		return puntRecollida;
+	}
+
+
+	public void setPuntRecollida(String puntRecollida) {
+		this.puntRecollida = puntRecollida;
+	}
+
+
+
 	@Override
 	public String toString() {
-		return "equipatge [idEquipatge=" + idEquipatge + ", pes=" + pes + ", origen=" + origen
-				+ ", desti=" + desti + "]";
+		return "equipatge [idEquipatge=" + idEquipatge + ", pes=" + pes + ", dni=" + dni + ", origen=" + origen
+				+ ", desti=" + desti + ", estat=" + estat + ", puntRecollida=" + puntRecollida + "]";
 	}
 	
 }

@@ -1,6 +1,7 @@
 package model;
 
 import java.sql.*;
+import java.util.Properties;
 import java.io.File;
 import java.io.IOException;
 import javax.xml.parsers.DocumentBuilder;
@@ -11,79 +12,41 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Properties;
 
 public class Conbd {
 	
-	private Connection con;
-	private String enllaç;
-	private String usuari;
-	private String contraseña;
+	Connection conn = null;
+	private String servidor = "localhost";
+	private String baseDades = "transpotravel?useSSL=false & useLegacyDatetimeCode = false & serverTimezone = UTC";
+	private String usuari = "root2";
+	private String password = "Transpotravel,0.+";
 	
-	
-	public Conbd() {
+	public Connection getConexio() {
+		
+		Properties props = new Properties();		
+		props.put("user", usuari);
+		props.put("password", password);
 		
 		try {
 			
-			// Declarem e Inicialitzem una nova instancia
-			DocumentBuilderFactory factory  = DocumentBuilderFactory.newInstance();
-
-			// Declarem e Inicialitzem un nou DocumentBuilder amb la instancia de factory
-			DocumentBuilder builder = factory.newDocumentBuilder();
-									
-			// Obtenim l'archiu
-			Document document = builder.parse(new File("C:\\Users\\Douglas\\eclipse-workspace\\practica\\src\\test\\java\\model\\prova.xml"));
-
-			// Obtenim l'arrel
-			Element root = document.getDocumentElement();
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://" + servidor + "/" + baseDades,props);
 			
-									
-			// Obtenim les etiquetes filles (IDs, noms, paisos)
-			NodeList list = root.getElementsByTagName("con");
-									
-			for (int i = 0; i < list.getLength(); i++) {
-				
-			    Element lan =  (Element) list.item(i);
-			    
-				NodeList clist = lan.getChildNodes();
-				
-				for (int j = 0; j < clist.getLength(); j++) {
-					
-					Node c = clist.item(j);
-					
-					if (c instanceof Element) {
-						if(c.getNodeName() == "usuari") {
-									usuari = c.getTextContent();
-						}
-						
-						if(c.getNodeName() == "contraseña") {
-							contraseña = c.getTextContent();
-						}
-						
-						if(c.getNodeName() == "enllaç") {
-							enllaç = c.getTextContent();
-						}
-						
-					}
-				}
-				
-			//Connectar a la BD
-			this.con = DriverManager.getConnection(enllaç,usuari,contraseña);
+			return conn;
 			
+		}catch(Exception e) {
 			
-						}} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}catch (ParserConfigurationException e) {
-			e.printStackTrace();
-		} catch (SAXException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println("Error base de dades " + e.getMessage());
+			return null;
+			
 		}
-	}
-
-	public Connection getCon() {
-		return con;
+		
+		
 	}
 	
 }

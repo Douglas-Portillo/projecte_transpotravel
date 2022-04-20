@@ -7,7 +7,7 @@ public class client extends persona{
 	public client(String nom, String cognoms, String dni, String adreca, String correu, String telefon,
 			boolean clientGold) {
 		super(nom, cognoms, dni, adreca, correu, telefon);
-		this.clientGold = clientGold;
+		this.clientGold = clientGold;//
 	}
 
 	public boolean getClientGold() {

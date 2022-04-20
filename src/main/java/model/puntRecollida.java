@@ -11,10 +11,13 @@ public class puntRecollida {
 		this.adreca = adreca;
 	}
 
-
+	
 	public int getIdPuntRecollida() {
 		return idPuntRecollida;
 	}
+
+
+
 
 
 	public void setIdPuntRecollida(int idPuntRecollida) {
@@ -22,14 +25,23 @@ public class puntRecollida {
 	}
 
 
+
+
+
 	public String getAdreca() {
 		return adreca;
 	}
 
 
+
+
+
 	public void setAdreca(String adreca) {
 		this.adreca = adreca;
 	}
+
+
+
 
 
 	@Override

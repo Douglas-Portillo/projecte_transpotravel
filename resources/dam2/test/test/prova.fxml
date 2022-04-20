@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dam2.test.test.TranspoTravelDefController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <HBox prefHeight="42.0" prefWidth="750.0" spacing="10.0" style="-fx-background-color: #ffff;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="42.0" prefWidth="50.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="BARS" />
+                     </graphic>
+                  </Label>
+                  <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="88.0" style="-fx-background-color: #ffff;" text="Ofertes">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="DOLLAR" />
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="112.0" style="-fx-background-color: #ffff;" text="Viatges">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="PLANE" />
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="112.0" style="-fx-background-color: #ffff;" text="Seguiment">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="SUITCASE" />
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="112.0" style="-fx-background-color: #ffff;" text="Contacte">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="PHONE" />
+                     </graphic>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </HBox>
+         </top>
+         <center>
+            <HBox fx:id="transpotravel" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #cfcfcf;" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>
+
